@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mfp:adapter name="UserInsertDB"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mfp="http://www.ibm.com/mfp/integration"
+	xmlns:http="http://www.ibm.com/mfp/integration/http">
+
+	<displayName>UserInsertDB</displayName>
+	<description>UserInsertDB</description>
+
+	<JAXRSApplicationClass>com.gbm.UserInsertDBApplication</JAXRSApplicationClass>
+
+	<property name="DB_type" displayName="DB Type" type="boolean" defaultValue="true" description="Seleccione true para Base de Datos DB2, false para Base de Datos Oracle." />
+	<property name="DB_driver" displayName="Database Driver" defaultValue="com.ibm.db2.jcc.DB2Driver" description="Ingrese el driver de la Base de Datos (DB2/Oracle)." />
+	<property name="DB_url" displayName="Database URL" defaultValue="jdbc:db2://hostname:port/db_name" description="Ingrese la URL de la Base de Datos. Ejemplo: jdbc:db2://127.0.0.1:50000/MFPDATA" />
+	<!--<property name="DB_url" displayName="Database URL" defaultValue="jdbc:db2://192.168.48.131:50000/MFPDATA" description="Ingrese la URL de la Base de Datos. Ejemplo: jdbc:db2://127.0.0.1:50000/MFPDATA" />-->
+	<property name="DB_name" displayName="Database Name" defaultValue="MFPDATA" description="Ingrese el nombre de la BD. Ejemplo: MFPDATA" />
+	<property name="DB_username" displayName="Database username" defaultValue="username" description="Ingrese el usuario para la conexión a la Base de Datos." />
+	<property name="DB_password" displayName="Database password" defaultValue="password" description="Ingrese el password para la conexión a la Base de Datos." />
+
+	<property name="Start_device_id" displayName="Star Device ID" defaultValue="1" type="integer" description="Ingrese el número inicial del dispisitivo que desea insertar en la Base de Datos." />
+	<property name="Count_device_id" displayName="Count Device ID" defaultValue="1000" type="integer" description="Ingrese la cantidad de dispisitivos que desea insertar en la Base de Datos." />
+</mfp:adapter>
